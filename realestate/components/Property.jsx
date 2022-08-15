@@ -10,14 +10,14 @@ import DefaultImage from '../assets/images/house.jpg';
 
 const Property = ({property :{ rooms,coverPhoto, price, rentFrequency,title,baths,area, agency, isVerified,externalId}}) => (
     <Link href={`/property/${externalId}`} passHref>
-        <Flex flexWrap = "wrap" w ="420px" p= "5" paddingTop="0"  justifyContent="flex-start" cursor="pointer">
+        <Flex flexWrap = "wrap" w ="425px" p= "5" paddingTop="2"  justifyContent="flex-start" cursor="pointer">
             <Box>
-                <Image src = {coverPhoto ? coverPhoto.url : DefaultImage} width={450} height = {300} alt = "house" />
+                <Image src = {coverPhoto ? coverPhoto.url : DefaultImage} width={900} height = {600} alt = "house" />
             </Box>
             <Box w = "full">
                 <Flex paddingTop ="2" alignItems ="center" justifyContent="space-between">
                     <Flex alignItems="center">
-                        <Box paddingRight="3" color ="green.400"> {isVerified && <GoVerified/> }</Box>
+                        <Box paddingRight="3" color ="green.400"> {isVerified && <GoVerified/> }</Box> 
                         <Text fontWeight={"bold"} fontSize="lg"> AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
                     </Flex>
                     <Box>
@@ -30,7 +30,6 @@ const Property = ({property :{ rooms,coverPhoto, price, rentFrequency,title,bath
 
                 </Flex>
                 <Text fontSize ="lg">
-
                     {title.length>30 ? `${title.substring(0,30)}...` : title}
                 </Text>
             
