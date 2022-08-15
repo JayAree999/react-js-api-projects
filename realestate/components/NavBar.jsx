@@ -20,10 +20,10 @@ const Navbar = () => (
                     <Link href="/search" passHref>
                         <MenuItem command ={<BsSearch />}> Search</MenuItem>
                     </Link>
-                    <Link href="/search?purpose=for=-sale" passHref>
+                    <Link href="/search?purpose=for-sale" passHref>
                         <MenuItem command ={<FcAbout />}> Buy </MenuItem>
                     </Link>
-                    <Link href="/search?purpose=for=-rent" passHref>
+                    <Link href="/search?purpose=for-rent" passHref>
                         <MenuItem command ={<FiKey />}> Rent</MenuItem>
                     </Link>
                     
