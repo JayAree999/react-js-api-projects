@@ -53,8 +53,12 @@ const SearchFilters = () => {
 
   return (
     <Flex flexDir='column'>
+       <Button onClick={() => setShowLocations(!showLocations)} border='1px' borderColor='gray.200' marginTop='2' >
+          Search Location
+        </Button>
 
-    { (
+
+      {showLocations && (
       <Flex flexDir='column' pos='relative' paddingTop='2'>
         <Input
           placeholder='Type Here'
@@ -76,7 +80,7 @@ const SearchFilters = () => {
         )}
 
         {loading && <Spinner margin='auto' marginTop='3' />}
-        {(
+        {showLocations && (
           <Box height='300px' overflow='auto'>
             {locationData?.map((location) => (
               <Box
