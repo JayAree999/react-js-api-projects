@@ -6,8 +6,8 @@ import {FiKey} from 'react-icons/fi';
 
 const Navbar = () => (
     <Flex p='2' borderBottom="1px" borderColor="gray.100">
-        <Box fontSize="4xl" color="gray.800" fontWeight="bold">
-            <Link href="/" paddingLeft ="2">Jstate</Link>
+        <Box fontSize="4xl" color="blue.400" fontWeight="bold">
+            <Link href="/" paddingLeft ="2">JState</Link>
         </Box>
         <Spacer></Spacer>
         <Box>
