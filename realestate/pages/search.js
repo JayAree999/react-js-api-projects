@@ -8,11 +8,17 @@ import SearchFilters from '../components/SearchFilters';
 import noresult from '../assets/images/noresult.png'
 import { fetchApi ,baseUrl} from '../utils/fetchApi';
 import Property from '../components/Property';
+
+
 const Search = ({properties}) => {
 
     const [searchFilters, setSearchFilters] = useState(false)
+
+
     const router = useRouter();
+
     return (
+        
     <Box>
         <Flex 
         cursor ="pointer" 
@@ -30,6 +36,8 @@ const Search = ({properties}) => {
             <Icon paddingLeft="2" w="7" as ={BsFilter}> </Icon>
         </Flex>
         {searchFilters && <SearchFilters  />}
+
+        
         <Text fontSize ="2xl" p="4" fontWeight="bold">
             Properties {router.query.purpose}
         </Text>
